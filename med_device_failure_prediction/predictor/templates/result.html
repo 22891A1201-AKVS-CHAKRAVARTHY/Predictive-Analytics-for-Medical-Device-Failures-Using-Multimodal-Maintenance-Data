@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/FavicoN.ico' %}" type="image/x-icon">      
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navbar-top">
+            <div class="left-section">
+                <img src="{% static 'images/Log0.png' %}" alt="Logo" class="logo">
+            </div>
+            <div class="center-section">
+                <h1 class="navbar-title">Medical Device Failure Prediction</h1>
+            </div>
+        </div>
+        <div class="navbar-buttons">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/form" class="nav-btn">Prediction</a>
+            <a href="/about" class="nav-btn">About</a>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="container" style="text-align: center;">
+        <h2>🔍 Result Summary</h2>
+        <p><strong>Device Serial No:</strong> {{ device_serial }}</p>
+        <div style="margin: 30px 0; padding: 20px; background-color: #f8f9ff; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); font-size: 1.1rem;">
+            The device is likely to experience: <br><br>
+
+            {% if prediction == 1 %}
+                <strong style="font-size: 1.3rem; color: green;">{{ prediction_label }}</strong>
+            {% elif prediction == 2 %}
+                <strong style="font-size: 1.3rem; color: orange;">{{ prediction_label }}</strong>
+            {% elif prediction == 3 %}
+                <strong style="font-size: 1.3rem; color: red;">{{ prediction_label }}</strong>
+            {% else %}
+                <strong style="font-size: 1.3rem; color: #333;">{{ prediction_label }}</strong>
+            {% endif %}
+
+            <br><br>
+            <em style="color: #888;">(Prediction Code: {{ prediction }})</em>
+        </div>
+        <div class="center-buttons">
+            <form action="{% url 'generate_single_pdf' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">📥 Download PDF</button>
+            </form>
+        </div>
+        <div class="center-buttons">
+            <a href="/form">
+                <button type="button">🔁 Back</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

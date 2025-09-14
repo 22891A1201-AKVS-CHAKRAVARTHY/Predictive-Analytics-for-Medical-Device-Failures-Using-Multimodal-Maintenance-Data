@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Medical Device Failure Prediction</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/FavicoN.ico' %}" type="image/x-icon">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #e0ecff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-content {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-blue {
+            color: #007bff;
+        }
+
+        .highlight-green {
+            color: green;
+        }
+
+        .highlight-orange {
+            color: orange;
+        }
+
+        .highlight-red {
+            color: red;
+        }
+
+        .download-link {
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: 500;
+            color: #4d4dff;
+            text-decoration: underline;
+        }
+
+        .manual-link {
+            color: purple;
+            text-decoration: underline;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-top">
+            <div class="left-section">
+                <img src="{% static 'images/Log0.png' %}" alt="Logo" class="logo">
+            </div>
+            <div class="center-section">
+                <h1 class="navbar-title">Medical Device Failure Prediction</h1>
+            </div>
+        </div>
+        <div class="navbar-buttons">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/form" class="nav-btn">Prediction</a>
+            <a href="/about" class="nav-btn">About</a>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>📊 Medical Device Failure Prediction Web App</h2>
+
+        <p>
+            This web application helps predict the failure risk of medical devices using historical and operational data. You can use it in two ways:
+        </p>
+
+        <h3>📂 Option 1: Upload Dataset</h3>
+        <p>Prepare a CSV or Excel file with the following columns:</p>
+        <ul>
+            <li><strong>Device_Serial_No</strong></li>
+            <li><strong>Age</strong> (in years)</li>
+            <li><strong>Maintenance_Cost</strong> (in INR)</li>
+            <li><strong>Downtime</strong> (in hours)</li>
+            <li><strong>Maintenance_Frequency</strong> (number of times/year)</li>
+            <li><strong>Failure_Event_Count</strong> (number of recorded failures)</li>
+        </ul>
+
+        <a href="{% static 'sample_device_data.csv' %}" class="download-link">📥 Download Sample CSV</a>
+
+        <h3>📝 Option 2: Use Manual Entry</h3>
+        <p>
+            You can manually enter one device's details using the
+            <a href="/form" class="manual-link">Manual Prediction Form</a>.
+        </p>
+
+        <p>
+            Results will show whether the device is
+            <span class="highlight-green">unlikely</span>,
+            <span class="highlight-orange">likely</span>, or
+            <span class="highlight-red">highly likely</span> to fail.
+        </p>
+    </div>
+</body>
+</html>

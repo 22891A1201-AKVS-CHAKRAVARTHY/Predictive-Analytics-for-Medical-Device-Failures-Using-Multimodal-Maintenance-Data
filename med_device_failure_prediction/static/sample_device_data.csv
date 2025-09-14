@@ -1,0 +1,4 @@
+Device_Serial_No,Age,Maintenance_Cost,Downtime,Maintenance_Frequency,Failure_Event_Count
+DVC001,2,15000,12,2,1
+DVC002,4,25000,30,3,4
+DVC003,1,12000,6,1,0

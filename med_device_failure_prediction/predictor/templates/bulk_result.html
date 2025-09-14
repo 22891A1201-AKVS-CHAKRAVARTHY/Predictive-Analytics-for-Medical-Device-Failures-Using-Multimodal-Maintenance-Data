@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bulk Results - Device Predictions</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="icon" href="{% static 'images/FavicoN.ico' %}" type="image/x-icon">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-top">
+      <div class="left-section">
+        <img src="{% static 'images/Log0.png' %}" alt="Logo" class="logo">
+      </div>
+      <div class="center-section">
+        <h1 class="navbar-title">Bulk Prediction Results</h1>
+      </div>
+    </div>
+    <div class="navbar-buttons">
+      <a href="/" class="nav-btn">Home</a>
+      <a href="/about" class="nav-btn">About</a>
+    </div>
+  </div>
+
+  <div class="container">
+    {% if results %}
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Device Serial No.</th>
+            <th>Prediction Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in results %}
+            <tr style="color: {{ row.color }};">
+              <td>{{ row.Device_Serial_No }}</td>
+              <td>{{ row.Prediction }}</td>
+              <td>{{ row.Prediction_Label }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="navigation-buttons">
+        <form method="post" action="{% url 'generate_pdf' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" formtarget="_blank" class="button-link">
+            📄 Download PDF Report
+          </button>
+        </form>
+        <a href="/form" class="button-link">
+          🔁 Back
+        </a>
+      </div>
+
+    {% else %}
+      <p>No bulk results available. Please go back and upload a file.</p>
+      <div class="navigation-buttons">
+        <a href="/form" class="button-link">
+          🔁 Back
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f3f6ff 0%, #e4ecfc 100%);
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #003366;
+  color: #fff;
+  padding: 8px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.logo {
+  height: 68px;
+  width: auto;
+  max-width: 100%;
+}
+
+.center-section {
+  flex: 1;
+  text-align: center;
+  margin: 10px 40px 10px 0;
+}
+
+.navbar-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navbar-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;    /* ensures vertical alignment */
+  gap: 1rem;              /* reduced for elegance */
+  margin: 0;              /* removes extra top spacing */
+  padding: 0;             /* no internal padding */
+  width: auto;
+  font-size: 0.95rem;
+}
+
+.nav-btn:hover,
+.button-link:hover {
+  text-decoration: wavy;
+  background-color: #0055a5;
+}
+
+.nav-btn,
+.button-link,
+button[type="submit"],
+button[type="button"] {
+  display: inline-block;
+  padding: 0.4rem 1rem;   /* slightly reduced for compactness */
+  margin: 0;              /* no extra bottom margin in navbar */
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #003366;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 51, 102, 0.2);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+
+.center-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.nav-btn:hover,
+.button-link:hover,
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0055a5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,85,165,0.2);
+}
+
+.nav-btn:active,
+.button-link:active,
+button[type="submit"]:active,
+button[type="button"]:active {
+  background-color: #004488;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,51,102,0.2);
+}
+
+.container {
+  max-width: 650px;
+  width: 90%;
+  margin: 60px auto;
+  background: #fff;
+  padding: 2.2rem 2.8rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,51,102,0.08);
+  opacity: 1;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.container h2 {
+  text-align: center;
+  color: #003366;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.results-table {
+  width: 100%;
+  margin: 1.25rem 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.results-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: 500;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #f8f9ff;
+}
+
+.results-table tr:hover {
+  background-color: #e4ecfc;
+}
+
+/* Stack nav buttons vertically when needed */
+.navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive tweaks for tablets */
+@media (max-width: 768px) {
+  .navbar-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center-section {
+    margin: 10px 0;
+  }
+
+  .navbar-buttons {
+    justify-content: center;
+  }
+
+  .container {
+    padding: 1.5rem;
+    margin: 30px auto;
+  }
+
+  .results-table {
+    font-size: 0.85rem;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 0.5rem;
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+form label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #003366;
+}
+
+/* Compact adjustments for smaller phones */
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 1.3rem;
+  }
+
+  .nav-btn,
+  .button-link,
+  button[type="submit"],
+  button[type="button"] {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

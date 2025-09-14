@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Medical Device Failure Prediction</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/FavicoN.ico' %}" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #e0ecff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #003366;
+            text-align: left;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 40px;
+            color: #003366;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: '▌';
+            color: #007BFF;
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 15px 0;
+            font-size: 1rem;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-top">
+            <div class="left-section">
+                <img src="{% static 'images/Log0.png' %}" alt="Logo" class="logo">
+            </div>
+            <div class="center-section">
+                <h1 class="navbar-title">Medical Device Failure Prediction</h1>
+            </div>
+        </div>
+        <div class="navbar-buttons">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/form" class="nav-btn">Prediction</a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <h2>📘 About</h2>
+
+        <h3>Project Guide</h3>
+        <p><strong>Mr. G. Ramakrishna</strong>, Assistant Professor, Department of Information Technology, has provided invaluable guidance and technical mentorship throughout the development of this project.</p>
+
+        <h3>Team Members</h3>
+        <ul>
+            <li><strong>A. K. V. S Chakravarthy</strong> – akvschakravarthy@gmail.com</li>
+            <li><strong>Shaik Muskan</strong> – skmuskanit@gmail.com</li>
+            <li><strong>Gopoji Sanjay</strong> – sanjayhcu2004@gmail.com</li>
+            <li><strong>Bommanoni Shiva</strong> – shivabommanoni@gmail.com</li>
+        </ul>
+
+        <h3>Project Overview</h3>
+        <p>
+            The Medical Device Failure Prediction system is built to support healthcare facilities in proactively identifying medical devices that are at risk of failure. Using machine learning techniques, the system predicts a device's failure class based on operational and maintenance data.
+        </p>
+
+        <h3>Input Features</h3>
+        <p>
+            The system takes the following inputs related to a medical device's operational and maintenance history:
+        </p>
+        <ul>
+            <li>Age of the Device</li>
+            <li>Maintenance Cost</li>
+            <li>Downtime</li>
+            <li>Maintenance Frequency</li>
+            <li>Failure Event Count</li>
+        </ul>
+
+        <h3>Output</h3>
+        <p>The model predicts one of the following failure risk categories:</p>
+        <ul>
+            <li><strong>Class 0:</strong> No imminent failure expected</li>
+            <li><strong>Class 1:</strong> Unlikely to fail within the first 3 years</li>
+            <li><strong>Class 2:</strong> Likely to fail within 3 years</li>
+            <li><strong>Class 3:</strong> Likely to fail after 3 years</li>
+        </ul>
+
+        <h3>Algorithms Used</h3>
+        <p><strong>Preprocessing Techniques:</strong></p>
+        <ul>
+            <li>Z-score normalization using StandardScaler</li>
+            <li>Cost per Event = Maintenance Cost / (Failure Events + 1)</li>
+            <li>Downtime per Frequency = Downtime / (Maintenance Frequency + 1)</li>
+        </ul>
+
+        <p><strong>Machine Learning Models:</strong></p>
+        <ul>
+            <li>Random Forest</li>
+            <li>Gradient Boosting (GridSearchCV tuned)</li>
+            <li>Support Vector Classifier (RBF)</li>
+            <li>Decision Tree</li>
+            <li>Naïve Bayes</li>
+        </ul>
+        <p>These are combined using a <strong>Weighted Voting Ensemble</strong> for optimal performance.</p>
+
+        <h3>Performance Summary</h3>
+        <ul>
+            <li><strong>Accuracy:</strong> ~93.6%</li>
+            <li><strong>Precision:</strong> ~93.7%</li>
+            <li><strong>Recall:</strong> ~93.6%</li>
+            <li><strong>F1 Score:</strong> ~93.6%</li>
+        </ul>
+    </div>
+</body>
+</html>
