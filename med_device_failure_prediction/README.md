@@ -45,7 +45,7 @@ For accurate predictions, the following device parameters are required:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/22891A1201-AKVS-CHAKRAVARTHY/Predictive-Analytics-for-Medical-Device-Failures-Using-Multimodal-Maintenance-Data.git
    cd med_device_failure_prediction
    ```
 
