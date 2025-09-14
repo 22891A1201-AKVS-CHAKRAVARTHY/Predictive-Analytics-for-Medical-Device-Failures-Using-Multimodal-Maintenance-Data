@@ -1,7 +1,3 @@
-Here’s your **complete and polished README.md** with the corrected **IEEE i-PACT license section** included. I also refined small parts for clarity (like prediction categories and sample data descriptions).
-
----
-
 ````markdown
 # Medical Device Failure Prediction
 
