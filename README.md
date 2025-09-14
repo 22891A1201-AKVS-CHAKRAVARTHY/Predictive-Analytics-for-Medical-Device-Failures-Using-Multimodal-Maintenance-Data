@@ -100,7 +100,7 @@ The system uses 7 key features for predictions:
 
 1. **Clone or Download the Project**
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/22891A1201-AKVS-CHAKRAVARTHY/Predictive-Analytics-for-Medical-Device-Failures-Using-Multimodal-Maintenance-Data.git)
    cd "Medical Device Failure Prediction"
    ```
 
