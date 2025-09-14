@@ -324,22 +324,18 @@ We welcome contributions to improve this medical device failure prediction syste
 - **Documentation**: Additional guides and tutorials
 - **Testing**: Unit tests, integration tests
 
-## 📄 License
+## 📝 License
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)**.
+© 2025 IEEE. This work has been accepted for presentation and publication in the **2025 Innovations in Power and Advanced Computing Technologies (i-PACT)** conference.
 
-### License Summary
-- ✅ **Share**: Copy and redistribute the material
-- ✅ **Attribution**: Give appropriate credit
-- ❌ **Commercial Use**: Not permitted
-- ❌ **Derivatives**: No modifications allowed
+Personal use of this material is permitted. However, permission to reprint/republish this material for advertising or promotional purposes, or for creating new collective works for resale or redistribution, must be obtained from IEEE by writing to pubs-permissions@ieee.org.
 
-For the full license text, visit: https://creativecommons.org/licenses/by-nc-nd/4.0/
+By using this code, you acknowledge that it is provided solely for academic and research purposes and is subject to IEEE publication policies.
 
 ## ⚠️ Important Disclaimers
 
 ### Medical Device Safety
-This application is designed for **educational and research purposes**. Important considerations:
+This application is for educational and research purposes. Medical device failure predictions should not be the sole basis for critical healthcare decisions. Always consult with qualified medical equipment technicians and follow manufacturer guidelines. This application is designed for **educational and research purposes**. Important considerations:
 
 - **Not for Critical Decisions**: Predictions should not be the sole basis for critical healthcare equipment decisions
 - **Professional Consultation**: Always consult qualified medical equipment technicians
