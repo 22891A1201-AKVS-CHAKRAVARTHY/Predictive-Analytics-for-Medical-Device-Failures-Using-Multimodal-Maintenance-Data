@@ -1,4 +1,3 @@
-````markdown
 # Medical Device Failure Prediction
 
 A Django-based web application that predicts medical device failure risks using machine learning algorithms. This system helps healthcare facilities proactively manage medical equipment maintenance and prevent unexpected failures.
@@ -237,8 +236,4 @@ For questions or support, please:
 ---
 
 **Built with ❤️ using Django and Machine Learning**
-
-```
-
----
 
